@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types'
 import './CardSide.css'
-const CardButton = ({salary, allActorsSalary}) => {
+const CardButton = ({data, allActorsSalary}) => {
+    const {salary} = data
     return (
         <div>
-            <button onClick={()=>allActorsSalary(salary)} className='card-button'>Hire actor</button>
+            <button onClick={()=>allActorsSalary(salary, data)} className='card-button'>Hire actor</button>
         </div>
     );
 };
 CardButton.propTypes ={
-    salary : PropTypes.number,
+    data : PropTypes.object,
     allActorsSalary : PropTypes.func,
 }
 export default CardButton;

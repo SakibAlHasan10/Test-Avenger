@@ -5,11 +5,14 @@ import CartSide from '../Cart/CartSide';
 import { useState } from 'react';
 const AllData = ({allData}) => {
     const [countSalary, setCountSalary] = useState(0)
-    const allActorsSalary = (salary) =>{
+    const [cartData, setCartData] = useState([])
+    const allActorsSalary = (salary, data) =>{
         const salarySum = countSalary + salary;
         setCountSalary(salarySum)
+        const cartActor = [...cartData, data]
+        setCartData(cartActor)
     }
-    // console.log(countSalary)
+    console.log(cartData)
     return (
         <div >
             <h2>Test Avenger</h2>
@@ -24,6 +27,7 @@ const AllData = ({allData}) => {
                 </div>
                 <div>
                     <CartSide 
+                    cartData ={cartData}
                     countSalary={countSalary}
                     ></CartSide>
                 </div>

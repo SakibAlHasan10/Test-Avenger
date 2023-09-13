@@ -13,7 +13,7 @@ const CardSide = ({data, allActorsSalary}) => {
             <h4>Age: {age}</h4>
             <h5>Country: {country}</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo.</p>
-            <CardButton salary={salary}
+            <CardButton data={data}
             allActorsSalary={allActorsSalary}
             ></CardButton>
         </div>
