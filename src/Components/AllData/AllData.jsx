@@ -23,7 +23,7 @@ const AllData = ({allData}) => {
     const allActorsSalary = (salary, data) =>{
         const salarySum = countSalary + salary;
         // console.log(budget)
-        if(salarySum > inputBudget){
+        if(salarySum > inputBudget || budget <=0){
             alert('Your balance is low of Actor salary')
             return
         }
