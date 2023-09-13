@@ -15,7 +15,7 @@ const CartSide = ({cartData, countSalary}) => {
                 
             </div>
             <div>
-                <h2>bangladesh</h2>
+                <h2>Hire Actors</h2>
                 <CartActorCon 
                     cartData = {cartData}
                 ></CartActorCon>

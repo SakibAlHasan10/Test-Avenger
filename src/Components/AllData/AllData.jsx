@@ -8,11 +8,16 @@ const AllData = ({allData}) => {
     const [cartData, setCartData] = useState([])
     const allActorsSalary = (salary, data) =>{
         const salarySum = countSalary + salary;
+        console.log(salarySum)
+        if(salarySum > 20000){
+            alert('your balance is low of your salary')
+            return
+        }
         setCountSalary(salarySum)
         const cartActor = [...cartData, data]
         setCartData(cartActor)
     }
-    console.log(cartData)
+    // console.log(cartData)
     return (
         <div >
             <h2>Test Avenger</h2>

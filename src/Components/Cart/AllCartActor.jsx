@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import './AllCartActor.css'
 const AllCartActor = ({actor}) => {
     const {image, name} = actor
-    console.log('line',actor)
+    // console.log('line',actor)
     return (
         <div className='all-card-actor'>
             <div className='actor-card-info'>
