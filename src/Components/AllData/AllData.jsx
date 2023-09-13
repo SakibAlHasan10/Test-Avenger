@@ -7,6 +7,7 @@ const AllData = ({allData}) => {
     const [countSalary, setCountSalary] = useState(0)
     const [cartData, setCartData] = useState([])
     const allActorsSalary = (salary, data) =>{
+        
         const salarySum = countSalary + salary;
         console.log(salarySum)
         if(salarySum > 20000){
