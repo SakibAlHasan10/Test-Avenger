@@ -6,14 +6,22 @@ import { useState } from 'react';
 const AllData = ({allData}) => {
     const [countSalary, setCountSalary] = useState(0)
     const [cartData, setCartData] = useState([])
+    const [budget, setBudget] = useState(20000)
+    // let budget;
     const allActorsSalary = (salary, data) =>{
-        
         const salarySum = countSalary + salary;
-        console.log(salarySum)
+        // console.log(budget)
         if(salarySum > 20000){
-            alert('your balance is low of your salary')
+            alert('Your balance is low of Actor salary')
             return
         }
+        const removeActor = cartData.find(actor => actor.id == data.id)
+        if(removeActor){
+            alert('This actor is booked')
+            return
+        }
+        // console.log(removeActor)
+        setBudget( 20000 - salarySum);
         setCountSalary(salarySum)
         const cartActor = [...cartData, data]
         setCartData(cartActor)
@@ -35,6 +43,7 @@ const AllData = ({allData}) => {
                     <CartSide 
                     cartData ={cartData}
                     countSalary={countSalary}
+                    budget ={budget}
                     ></CartSide>
                 </div>
             </div>
