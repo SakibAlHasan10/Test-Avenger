@@ -5,11 +5,10 @@ import AllData from "./AllData";
 const DataCall = () => {
     const [allData, setAllData] = useState([])
     useEffect(()=>{
-        fetch('../../../public/data.json')
+        fetch('data.json')
         .then(res => res.json())
         .then(data=> setAllData(data))
     },[]) 
-    // console.log(data)
     return (
         <div>
             <AllData allData={allData}></AllData>
