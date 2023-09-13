@@ -1,8 +1,11 @@
 .data-container{
     display: flex;
+    gap: 2rem;
+    
 }
 .all-Card{
     display: flex;
     flex-wrap: wrap;
-    background-color: aqua;
+    width: 70%;
+    justify-content: space-around;
 }

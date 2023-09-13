@@ -3,8 +3,6 @@ import Data from "../Data/data";
 import './allData.css'
 import CartSide from '../Cart/CartSide';
 const AllData = ({allData}) => {
-    // console.log(data)
-    
     return (
         <div >
             <h2>Test Avenger</h2>

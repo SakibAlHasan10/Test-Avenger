@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import CardSide from '../CardSide/CardSide';
-import CartSide from '../Cart/CartSide';
 import './Data.css'
 const Data = ({data}) => {
     return (

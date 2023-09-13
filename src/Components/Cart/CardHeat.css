@@ -1,0 +1,11 @@
+.card-head{
+    padding:0 1rem;
+    border: 2px solid rgb(162, 162, 228);
+    background-color: rgb(222, 161, 161);
+}
+
+.card-head-title{
+    font-size: 2rem;
+    margin: 0px;
+    width: 100%;
+}
