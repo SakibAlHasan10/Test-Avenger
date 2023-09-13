@@ -1,12 +1,8 @@
 import PropTypes from 'prop-types'
 import './CartSide.css'
-const CartSum = ({countSalary, budget}) => {
-    // console.log(budget)
-    const budgetInput = 
-    <input id='b-input' className='budget-input' type="text" placeholder="Enter your budget"/>
-    
+const CartSum = ({countSalary, budget, budgetInput}) => {
     return (
-        <div>
+        <div className='sum-container'>
             {
                 budgetInput
             }
@@ -16,6 +12,7 @@ const CartSum = ({countSalary, budget}) => {
     );
 };
 CartSum.propTypes ={
+    budgetInput : PropTypes.object,
     countSalary : PropTypes.number,
     budget : PropTypes.number
 }

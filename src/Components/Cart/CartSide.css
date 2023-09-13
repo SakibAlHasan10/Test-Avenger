@@ -21,3 +21,7 @@
     margin: 0px;
     padding-top: 1rem;
 }
+
+.sum-container input{
+    padding: 0px 10px;
+}

@@ -3,7 +3,7 @@ import CardHeat from './CardHeat';
 import './CartSide.css'
 import CartSum from './CartSum';
 import CartActorCon from './CartActorCon';
-const CartSide = ({cartData, countSalary, budget}) => {
+const CartSide = ({cartData, countSalary, budget, budgetInput}) => {
     return (
         <>
             <div className="cart-Container">
@@ -12,6 +12,7 @@ const CartSide = ({cartData, countSalary, budget}) => {
             <div className="project-budget">
                 <CartSum countSalary={countSalary}
                 budget ={budget}
+                budgetInput={budgetInput}
                 ></CartSum>
                 
             </div>
@@ -26,6 +27,7 @@ const CartSide = ({cartData, countSalary, budget}) => {
 };
 
 CartSide.propTypes ={
+    budgetInput : PropTypes.object,
     cartData : PropTypes.array,
     countSalary : PropTypes.number,
     budget : PropTypes.number

@@ -3,15 +3,27 @@ import Data from "../Data/data";
 import './allData.css'
 import CartSide from '../Cart/CartSide';
 import { useState } from 'react';
+let budgetInput ;
+let inputBudget;
 const AllData = ({allData}) => {
-    const [countSalary, setCountSalary] = useState(0)
     const [cartData, setCartData] = useState([])
-    const [budget, setBudget] = useState(20000)
-    // let budget;
+    const [countSalary, setCountSalary] = useState(0)
+    const [budget, setBudget] = useState(0)
+
+
+    const inputDown = (e) =>{
+        if(e.key === 'Enter'){
+            inputBudget = (parseInt(e.target.value))
+            setBudget(inputBudget)
+            // console.log(budget)
+            e.target.value = '';
+        }
+    }
+    budgetInput = <input id='b-input' onKeyDown={inputDown} className='budget-input' type="text" placeholder="Enter your budget"/>
     const allActorsSalary = (salary, data) =>{
         const salarySum = countSalary + salary;
         // console.log(budget)
-        if(salarySum > 20000){
+        if(salarySum > inputBudget){
             alert('Your balance is low of Actor salary')
             return
         }
@@ -21,10 +33,13 @@ const AllData = ({allData}) => {
             return
         }
         // console.log(removeActor)
-        setBudget( 20000 - salarySum);
+        setBudget( budget - salary);
+        // console.log(budget)
+
         setCountSalary(salarySum)
         const cartActor = [...cartData, data]
         setCartData(cartActor)
+        
     }
     // console.log(cartData)
     return (
@@ -44,6 +59,7 @@ const AllData = ({allData}) => {
                     cartData ={cartData}
                     countSalary={countSalary}
                     budget ={budget}
+                    budgetInput={budgetInput}
                     ></CartSide>
                 </div>
             </div>
