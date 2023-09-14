@@ -17,7 +17,7 @@ const CartSide = ({cartData, countSalary, budget, budgetInput}) => {
                 
             </div>
             <div>
-                <h2>Hire Actors</h2>
+                <h2 className='cart-actor-title'>Hire Actors</h2>
                 <CartActorCon 
                     cartData = {cartData}
                 ></CartActorCon>

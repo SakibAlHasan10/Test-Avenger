@@ -9,3 +9,8 @@
     width: 70%;
     justify-content: space-around;
 }
+
+.body-title{
+    color: white;
+    font-size: 3rem;
+}
